@@ -1,8 +1,13 @@
+/* Estilo general */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    color: #333;
+}
+body {
+    margin-bottom: 80px; /* Ajusta el margen inferior según sea necesario */
 }
 
 header {
@@ -14,32 +19,44 @@ header {
 header nav ul {
     list-style: none;
     padding: 0;
-    text-align: center;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
-    display: inline;
     margin: 0 1rem;
 }
 
 header nav ul li a {
     color: #fff;
     text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header nav ul li a:hover {
+    background-color: #727272;
 }
 
 .content {
     padding: 2rem;
-    text-align: center;
+    text-align: justify;
 }
 
 footer {
     background-color: #333;
     color: #fff;
+    padding: 10px 0;
     text-align: center;
-    padding: 1rem 0;
+    width: 100%;
     position: fixed;
     bottom: 0;
-    width: 100%;
+    left: 0;
+    height: 50px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
 }
 
 form {
@@ -50,26 +67,23 @@ form {
     border-radius: 8px;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
 }
+
 form div {
     margin-bottom: 20px;
 }
+
 label {
     display: block;
     font-weight: bold;
 }
+
 input[type="text"],
 input[type="date"],
 input[type="password"],
 input[type="email"],
 select,
-input[type="number"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-textarea{
+input[type="number"],
+textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -77,37 +91,27 @@ textarea{
     box-sizing: border-box;
 }
 
-input[type="submit"] {
+input[type="submit"],
+button {
     width: 100%;
     background-color: #333;
     color: white;
     padding: 14px 20px;
-    margin: 8px 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
 }
-input[type="submit"]:hover {
-    background-color: #333;
-}
-button {
-    padding: 0.75rem;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
 
+input[type="submit"]:hover,
 button:hover {
-    background-color: #333;
+    background-color: #555;
 }
 
 .slider {
     position: relative;
     width: 100%;
-    max-width: 1000px; /* Ajustar ancho máximo del slider */
+    max-width: 1000px;
     margin: 0 auto 40px;
     overflow: hidden;
     border-radius: 10px;
@@ -126,48 +130,67 @@ button:hover {
 
 .slide img {
     width: 100%;
-    display: block;
-    height: 500px; /* Ajustar altura de las imágenes del slider */
+    height: 500px;
     object-fit: cover;
-    border-radius: 10px; /* Redondear esquinas */
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-p{
+p {
     text-align: center;
 }
+
+.main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .container {
-    
     display: flex;
     align-items: center;
     padding: 20px;
-    max-width: 2000px;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-    background-color: #f9f9f9;
+    border-radius: 10px;
+    flex-wrap: wrap;
 }
+
 .container img {
-    margin-right: 20px;
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 10px;
 }
 
-.content{
+.container .content {
+    flex: 1;
+    text-align: justify;
+    padding: 20px;
+}
+
+h1 {
     text-align: center;
 }
 
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f8f9fa; /* Color de fondo similar */
-}
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
 
-body {
-    margin-bottom: 80px; /* Ajusta el margen inferior según sea necesario */
-}
-h1{
-    text-align: center;
+    header nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
+
+    .slide img {
+        height: auto;
+    }
 }
