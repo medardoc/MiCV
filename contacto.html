@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi CV - Contactactame</title>
+    <title>Mi CV - Contactame</title>
     <link rel="icon" href="img/dev-removebg-preview.png" type="image/png">
-
     <link rel="stylesheet" href="CSS/style.css"> <!-- Asegúrate de que esta ruta es correcta -->
 </head>
 
@@ -20,7 +19,8 @@
     </header>
 
     <h1>Contactame</h1>
-    <form id="contactForm">
+    <form id="contactForm" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
         <label for="name">Nombre:</label>
         <input type="text" id="name" name="name" required>
         <br>
@@ -33,9 +33,6 @@
         <input type="submit" value="Enviar">
     </form>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="JS/script.js"></script> <!-- Asegúrate de que esta ruta es correcta -->
- 
     <section id="contactos">
         <h2>Puedes contactarme También:</h2>
         <div class="InconoInsta">
