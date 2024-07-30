@@ -9,6 +9,12 @@ body {
 body {
     margin-bottom: 80px; /* Ajusta el margen inferior según sea necesario */
 }
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
 
 header {
     background-color: #333;
