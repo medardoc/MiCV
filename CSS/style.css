@@ -188,6 +188,10 @@ h1 {
         align-items: center;
     }
 
+    header {
+        background-color: #333; /* Cambia el color de fondo del header a gris oscuro */
+    }
+
     header nav ul li {
         margin: 0.5rem 0;
     }
